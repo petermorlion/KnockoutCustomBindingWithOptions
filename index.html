@@ -5,11 +5,11 @@
 		<script src="./index.js"></script>
 	</head>
 	<body>
-		<select data-bind="value: cityId">
+		<select data-bind="value: cityId, selectedDataAttribute: { bind: 'data-country', to: 'country' }">
 			<option value="1" data-country="Belgium">Brussels</option>
 			<option value="2" data-country="United Kingdom">London</option>
 			<option value="3" data-country="France">Paris</option>
 		</select>
-		Selected city id <span data-bind="text: cityId"></span> in (<span></span>).
+		Selected city id <span data-bind="text: cityId"></span> in (<span data-bind="text: country"></span>).
 	</body>
 </html>
